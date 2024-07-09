@@ -5,7 +5,7 @@
             <img src="../assets/images/logo-icon.png" class="logo-img" alt="">
         </div> --}}
         <div class="logo-name flex-grow-1 float-left">
-            <h5 class="mb-0">Admin</h5>
+            <h5 class="mb-0 text-center">Admin</h5>
         </div>
         <div class="sidebar-close">
             <span class="material-icons-outlined">close</span>
@@ -36,14 +36,29 @@
                     <div class="menu-title">Tables</div>
                 </a>
                 <ul>
-                    <li><a href="{{ route('pengguna.index') }}"><i
+                    <li>
+                        <a href="{{ route('pengguna.index') }}"><i
                                 class="material-icons-outlined">arrow_right</i>Pengguna</a>
                     </li>
-                    <li><a href="{{ route('testimoni.index') }}"><i
+                    <li>
+                        <a href="{{ route('testimoni.index') }}"><i
                                 class="material-icons-outlined">arrow_right</i>Testimoni</a>
                     </li>
-                    <li><a href="{{ route('pertanyaan.index') }}"><i
+                    <li>
+                        <a href="{{ route('pertanyaan.index') }}"><i
                                 class="material-icons-outlined">arrow_right</i>Pertanyaan</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('jawaban.index') }}"><i
+                                class="material-icons-outlined">arrow_right</i>Jawaban</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('jeniskepribadian.index') }}"><i
+                                class="material-icons-outlined">arrow_right</i>Tipe kepribadian</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('hasil.index') }}"><i
+                                class="material-icons-outlined">arrow_right</i>Hasil</a>
                     </li>
                 </ul>
             </li>
