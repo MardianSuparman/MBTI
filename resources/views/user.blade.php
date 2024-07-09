@@ -10,12 +10,12 @@
                         <span>Personality Test</span>
                         <p>MBTI (Myers-Briggs Type Indicator) adalah salah satu alat psikologi yang digunakan untuk
                             mengklasifikasikan kepribadian seseorang berdasarkan empat dimensi utama </p>
-                        <a href="#">Mulai Test</a>
+                        <a href="{{url('test')}}" class="btn">Mulai Test</a>
                     </div>
                 </div>
                 <div class="col-md-7">
                     <div class="text-img">
-                        <figure><img src="{{ asset('assets/front/images/mbti.png') }}" /></figure>
+                        {{-- <figure><img src="{{ asset('assets/front/images/mbti.png') }}" /></figure> --}}
                     </div>
                 </div>
             </div>
@@ -35,25 +35,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="web_hosting">
-                        <figure><img src="{{ asset('assets/front/images/web.jpg') }}" alt="#" /></figure>
+                        <figure><img src="{{ asset('assets/front/images/cover.jpg') }}" alt="#" /></figure>
                         <p>MBTI (Myers-Briggs Type Indicator) adalah salah satu alat psikologi yang digunakan untuk
                             mengklasifikasikan kepribadian seseorang berdasarkan empat dimensi utama:
-
-                            1. **Ekstrovert (E) vs Introvert (I)**: Bagaimana seseorang mendapatkan energi—dari interaksi
-                            sosial dan lingkungan luar (Ekstrovert) atau dari waktu sendiri dan refleksi internal
-                            (Introvert).
-
-                            2. **Intuisi (N) vs Sensori (S)**: Cara seseorang mengumpulkan informasi—apakah mereka lebih
-                            cenderung memperhatikan detail konkret dan fakta (Sensori) atau lebih terbuka terhadap ide-ide
-                            baru dan melihat potensi (Intuisi).
-
-                            3. **Pemikiran (T) vs Perasaan (F)**: Bagaimana seseorang membuat keputusan—apakah mereka lebih
-                            cenderung menggunakan logika dan analisis obyektif (Pemikiran) atau mempertimbangkan nilai-nilai
-                            dan dampak emosional (Perasaan).
-
-                            4. **Menilai (J) vs Persepsi (P)**: Bagaimana seseorang merencanakan dan mengatur hidup
-                            mereka—apakah mereka lebih suka mengatur waktu mereka dan mengambil keputusan (Menilai) atau
-                            lebih suka fleksibel dan terbuka terhadap pengalaman baru (Persepsi).
 
                             Gabungan preferensi pada empat dimensi ini menghasilkan 16 tipe kepribadian yang berbeda.
                             Misalnya, seseorang bisa menjadi tipe INFP (Introvert, Intuisi, Perasaan, Persepsi) atau ESTJ

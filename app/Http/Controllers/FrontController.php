@@ -13,9 +13,9 @@ class FrontController extends Controller
         return view('user');
     }
 
-    public function contact()
+    public function test()
     {
-        return view('contact');
+        return view('pengisian');
     }
 
     public function shop()
