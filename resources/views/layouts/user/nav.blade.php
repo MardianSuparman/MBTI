@@ -18,7 +18,7 @@
                 <div class="collapse navbar-collapse" id="navbarsExample04">
                    <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
-                         <a class="nav-link" href="#">Home</a>
+                         <a class="nav-link" href="{{url('/')}}">Home</a>
                       </li>
                    </ul>
                 </div>

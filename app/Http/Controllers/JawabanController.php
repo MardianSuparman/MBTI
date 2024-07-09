@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\jawaban;
+use App\Models\Pertanyaan;
 use Illuminate\Http\Request;
+use Alert;
 
 class JawabanController extends Controller
 {
@@ -32,13 +34,13 @@ class JawabanController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'pertanyaan' => 'required',
+            'id_pertanyaan' => 'required',
             'jawaban' => 'required',
         ]);
 
         $jawaban=new jawaban();
         $jawaban->jawaban=$request->jawaban;
-        $jawaban->pertanyaan=$request->pertanyaan;
+        $jawaban->id_pertanyaan=$request->id_pertanyaan;
         $jawaban->save();
         Alert::success('Success', 'Data Berhasil di Tambahkan')->autoClose(2000);
         return redirect()->route('jawaban.index');
@@ -67,13 +69,13 @@ class JawabanController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'pertanyaan' => 'required',
+            'id_pertanyaan' => 'required',
             'jawaban' => 'required',
         ]);
 
         $jawaban=Jawaban::findOrFail($id);
         $jawaban->jawaban=$request->jawaban;
-        $jawaban->pertanyaan=$request->pertanyaan;
+        $jawaban->id_pertanyaan=$request->id_pertanyaan;
         $jawaban->save();
         Alert::success('Success', 'Data Berhasil di Edit')->autoClose(2000);
         return redirect()->route('jawaban.index');

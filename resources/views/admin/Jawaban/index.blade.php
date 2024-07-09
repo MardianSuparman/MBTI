@@ -19,7 +19,7 @@
             </div>
             <div class="ms-auto">
                 <div class="btn-group">
-                    <a href="{{ Route('pertanyaan.create') }}" class="btn btn-primary">Add Data</a>
+                    <a href="{{ Route('jawaban.create') }}" class="btn btn-primary">Add Data</a>
                     {{-- <button type="button" class="btn btn-primary">Settings</button>
                           <button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">	<span class="visually-hidden">Toggle Dropdown</span>
                           </button>
@@ -33,7 +33,7 @@
         </div>
         <!--end breadcrumb-->
 
-        <h6 class="mb-0 text-uppercase">DataTable Pertanyaan</h6>
+        <h6 class="mb-0 text-uppercase">DataTable jawaban</h6>
         <hr>
         <div class="card">
             <div class="card-body">
@@ -42,8 +42,8 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Pertanyaan</th>
-                                <th>Jawaban</th>
+                                <th>pertanyaan</th>
+                                <th>jawaban</th>
 
                             </tr>
                         </thead>
@@ -52,17 +52,17 @@
                             @foreach ($jawaban as $data)
                             <tr>
                                 <td>{{ $i++ }}</td>
-                                <td>{{ $data->pertanyaan }}</td>
+                                <td>{{ $data->id_pertanyaan }}</td>
                                 <td>{{ $data->jawaban }}</td>
                                 <td>
-                                    <form action="{{ Route('pertanyaan.destroy', $data->id) }}" method="post">
+                                    <form action="{{ Route('jawaban.destroy', $data->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{ Route('pertanyaan.edit', $data->id) }}" class="btn btn-warning">
+                                        <a href="{{ Route('jawaban.edit', $data->id) }}" class="btn btn-warning">
                                             Edit
                                         </a>
                                         |
-                                        <a href="{{ route('pertanyaan.destroy', $data->id) }}" class="btn btn-danger"
+                                        <a href="{{ route('jawaban.destroy', $data->id) }}" class="btn btn-danger"
                                             data-confirm-delete="true">Delete</a>
                                     </form>
                                 </td>
@@ -73,7 +73,7 @@
 
                         </tfoot>
                     </table>
-                    {{-- {!! $pertanyaan->withQueryString()->links('pagination::bootstrap-4') !!} --}}
+                    {{-- {!! $jawaban->withQueryString()->links('pagination::bootstrap-4') !!} --}}
                 </div>
             </div>
         </div>
