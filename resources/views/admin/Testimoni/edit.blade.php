@@ -13,7 +13,7 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{ Route('tesimoni.index') }}" class="btn btn-primary">Kembali</a>
+                <a href="{{ Route('testimoni.index') }}" class="btn btn-primary">Kembali</a>
             </div>
         </div>
     </div>
@@ -22,14 +22,14 @@
     <hr>
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('tesimoni.update', $tesimoni->id ) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('testimoni.update', $testimoni->id ) }}" method="post" enctype="multipart/form-data">
                 @method('put')
                 @csrf
                 <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input class="form-control @error('name') is-invalid @enderror" type="text" name="name"
-                        id="name"  value="{{ $tesimoni->pengguna->name }}">
-                    @error('name')
+                    <label for="id_pengguna" class="form-label">id_pengguna</label>
+                    <input class="form-control @error('id_pengguna') is-invalid @enderror" type="text" name="id_pengguna"
+                        id="id_pengguna"  value="{{ $testimoni->id_pengguna }} ">
+                    @error('id_pengguna')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -38,7 +38,7 @@
                 <div class="mb-3">
                     <label for="email" class="form-label"> Email </label>
                     <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
-                        id="email" value="{{ $tesimoni->email }}"">
+                        id="email" value="{{ $testimoni->pengguna->email }}">
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

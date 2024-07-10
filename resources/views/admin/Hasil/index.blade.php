@@ -56,7 +56,7 @@
                                 <td>{{ $data->pengguna->name }}</td>
                                 <td>{{ $data->jawaban->jawaban }}</td>
                                 <td>{{ $data->jeniskepribadian->jenis_kepribadian }}</td>
-                                <td>
+                                {{-- <td>
                                     <form action="{{ Route('hasil.destroy', $data->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
@@ -67,7 +67,7 @@
                                         <a href="{{ route('hasil.destroy', $data->id) }}" class="btn btn-danger"
                                             data-confirm-delete="true">Delete</a>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                             @endforeach
                         </tbody>

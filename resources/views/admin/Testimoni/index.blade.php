@@ -62,7 +62,7 @@
                                         @method('DELETE')
                                         <a href="{{ Route('testimoni.edit', $data->id) }}" class="btn btn-warning">
                                             Edit
-                                        </a>
+                                        </a> 
                                         |
                                         <a href="{{ route('testimoni.destroy', $data->id) }}" class="btn btn-danger"
                                             data-confirm-delete="true">Delete</a>

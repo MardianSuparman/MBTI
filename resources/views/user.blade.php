@@ -19,11 +19,11 @@ data-pause="hover" data-interval="false">
                             <div class="big-tagline">
                                 <h2><strong >Personality Test </strong></h2>
                                 <p class="lead">
-                                    Ketahui siapa dirimu dammulai tentukan karirmu
+                                    Ketahui siapa dirimu dan mulai tentukan karirmu
                                 </p>
-                                <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
+                                {{-- <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#" class="hover-btn-new"><span>Read More</span></a>
+                                <a href="#" class="hover-btn-new"><span>Read More</span></a> --}}
                             </div>
                         </div>
                     </div><!-- end row -->
