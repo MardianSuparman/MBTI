@@ -54,7 +54,7 @@
                                 <td>{{ $i++ }}</td>
                                 <td>{{ $data->pertanyaan }}</td>
                                 <td>{{ $data->dimensi }}</td>
-                                <td>
+                                {{-- <td>
                                     <form action="{{ Route('pertanyaan.destroy', $data->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
@@ -65,7 +65,7 @@
                                         <a href="{{ route('pertanyaan.destroy', $data->id) }}" class="btn btn-danger"
                                             data-confirm-delete="true">Delete</a>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                             @endforeach
                         </tbody>

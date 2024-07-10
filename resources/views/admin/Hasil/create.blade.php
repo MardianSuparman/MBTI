@@ -13,20 +13,20 @@
         </div>
         <div class="ms-auto">
             <div class="btn-group">
-                <a href="{{ Route('pengguna.index') }}" class="btn btn-primary">Kembali</a>
+                <a href="{{ Route('hasil.index') }}" class="btn btn-primary">Kembali</a>
             </div>
         </div>
     </div>
 
-    <h6 class="mb-0 text-uppercase"> ADD PERTANYAAN </h6>
+    <h6 class="mb-0 text-uppercase"> ADD HASIL </h6>
     <hr>
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('pertanyaan.store') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('hasil.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 {{-- <div class="mb-3">
                     <label for="pertanyaan" class="form-label">Pertanyaan</label>
-                    <textarea class="form-control @error('pertanyaan') is-invalid @enderror" type="text" aria-label="With textarea" placeholder="Pertanyaan" dimensi="pertanyaan"
+                    <textarea class="form-control @error('pertanyaan') is-invalid @enderror" type="text" aria-label="With textarea" placeholder="Pertanyaan" pengertian="pertanyaan"
                     id="pertanyaan"></textarea>
                     @error('pertanyaan')
                     <span class="invalid-feedback" role="alert">
@@ -35,24 +35,28 @@
                     @enderror
                 </div> --}}
                 <div class="mb-3">
-                    <label for="pertanyaan" class="form-label"></label>
-                    <input class="form-control @error('pertanyaan') is-invalid @enderror" type="text" name="pertanyaan"
-                    id="pertanyaan" placeholder="pertanyaan">
-                    @error('pertanyaan')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
+                    <label for="id_pengguna">Pengguna</label>
+                    <select name="id_pengguna" id="id_pengguna" class="form-control">
+                        @foreach ($pengguna as $item)
+                            <option value="{{$item->id}}">{{ $item->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="mb-3">
-                    <label for="dimensi" class="form-label">Dimensi</label>
-                    <input class="form-control @error('dimensi') is-invalid @enderror" type="text" name="dimensi"
-                    id="dimensi" placeholder="dimensi">
-                    @error('dimensi')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
+                    <label for="id_jawaban">Jawaban</label>
+                    <select name="id_jawaban" id="id_jawaban" class="form-control">
+                        @foreach ($jawaban as $item)
+                            <option value="{{$item->id}}">{{ $item->jawaban }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="id_jenis_kepribadian">Jenis Kepribadian</label>
+                    <select name="id_jenis_kepribadian" id="id_jenis_kepribadian" class="form-control">
+                        @foreach ($jeniskepribadian as $item)
+                            <option value="{{$item->id}}">{{ $item->jenis_kepribadian }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="float-end">
                     <button type="submit" class="btn btn-sm btn-primary">Simpan</button>

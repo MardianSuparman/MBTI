@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Hasil;
 use Illuminate\Http\Request;
+use App\Models\Pengguna;
+use App\Models\Jawaban;
+use App\Models\JenisKepribadian;
+use Alert;
 
 class HasilController extends Controller
 {
@@ -23,10 +27,10 @@ class HasilController extends Controller
     public function create()
     {
         $pengguna=Pengguna::all();
-        $pertanyaan=Pertanyaan::all();
+        // $pertanyaan=Pertanyaan::all();
         $jawaban=Jawaban::all();
         $jeniskepribadian=JenisKepribadian::all();
-        return view('admin.hasil.create', compact('pengguna', 'pertanyaan', 'hasil', 'jeniskepribadian'));
+        return view('admin.hasil.create', compact('pengguna','jawaban', 'jeniskepribadian'));
     }
 
     /**
@@ -36,16 +40,16 @@ class HasilController extends Controller
     {
         $this->validate($request, [
             'id_pengguna'=>'required',
-            'id_pertanyaan'=>'required',
-            'id_hasil'=>'required',
-            'id_tipe_kepribadian'=>'required',
+            // 'id_pertanyaan'=>'required',
+            'id_jawaban'=>'required',
+            'id_jenis_kepribadian'=>'required',
         ]);
 
         $hasil=new hasil();
         $hasil->id_pengguna=$request->id_pengguna;
-        $hasil->id_pertanyaan=$request->id_pertanyaan;
+        // $hasil->id_pertanyaan=$request->id_pertanyaan;
         $hasil->id_jawaban=$request->id_jawaban;
-        $hasil->id_tipe_kepribadian=$request->id_tip_kepribadiane;
+        $hasil->id_jenis_kepribadian=$request->id_jenis_kepribadian;
         $hasil->save();
         Alert::success('Success', 'Data Berhasil di Tambahkan')->autoClose(2000);
         return redirect()->route('hasil.index');
@@ -75,16 +79,16 @@ class HasilController extends Controller
     {
         $this->validate($request, [
             'id_pengguna'=>'required',
-            'id_pertanyaan'=>'required',
-            'id_hasil'=>'required',
-            'id_tipe_kepribadian'=>'required',
+            // 'id_pertanyaan'=>'required',
+            'id_jawaban'=>'required',
+            'id_jenis_kepribadian'=>'required',
         ]);
 
         $hasil=Hasil::findOrFail($id);
         $hasil->id_pengguna=$request->id_pengguna;
-        $hasil->id_pertanyaan=$request->id_pertanyaan;
-        $hasil->id_hasil=$request->id_hasil;
-        $hasil->id_tipe_kepribadian=$request->id_tip_kepribadiane;
+        // $hasil->id_pertanyaan=$request->id_pertanyaan;
+        $hasil->id_jawaban=$request->id_jawaban;
+        $hasil->id_jenis_kepribadian=$request->id_jenis_kepribadian;
         $hasil->save();
         Alert::success('Success', 'Data Berhasil di Tambahkan')->autoClose(2000);
         return redirect()->route('hasil.index');

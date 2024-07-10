@@ -18,9 +18,9 @@ class FrontController extends Controller
         return view('pengisian');
     }
 
-    public function shop()
+    public function tipe()
     {
-        return view('shop');
+        return view('tipe');
     }
 
     public function cart()

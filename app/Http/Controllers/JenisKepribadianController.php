@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\JenisKepribadian;
 use Illuminate\Http\Request;
+use Alert;
 
 class JenisKepribadianController extends Controller
 {
@@ -31,7 +32,7 @@ class JenisKepribadianController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'jeniskepribadian' => 'required',
+            'jenis_kepribadian' => 'required',
             'pengertian' => 'required',
             'kelebihan' => 'required',
             'kekurangan' => 'required',
@@ -39,7 +40,7 @@ class JenisKepribadianController extends Controller
         ]);
 
         $jeniskepribadian=new JenisKepribadian();
-        $jeniskepribadian->jeniskepribadian=$request->jeniskepribadian;
+        $jeniskepribadian->jenis_kepribadian=$request->jenis_kepribadian;
         $jeniskepribadian->pengertian=$request->pengertian;
         $jeniskepribadian->kelebihan=$request->kelebihan;
         $jeniskepribadian->kekurangan=$request->kekurangan;
@@ -72,12 +73,15 @@ class JenisKepribadianController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'pertanyaan' => 'required',
-            'jeniskepribadian' => 'required',
+            'jenis_kepribadian' => 'required',
+            'pengertian' => 'required',
+            'kelebihan' => 'required',
+            'kekurangan' => 'required',
+            'karir' => 'required',
         ]);
 
         $jeniskepribadian=JenisKepribadian::findOrFail($id);
-        $jeniskepribadian->jeniskepribadian=$request->jeniskepribadian;
+        $jeniskepribadian->jenis_kepribadian=$request->jenis_kepribadian;
         $jeniskepribadian->pengertian=$request->pengertian;
         $jeniskepribadian->kelebihan=$request->kelebihan;
         $jeniskepribadian->kekurangan=$request->kekurangan;

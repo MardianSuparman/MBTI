@@ -19,7 +19,7 @@
             </div>
             <div class="ms-auto">
                 <div class="btn-group">
-                    <a href="{{ Route('hasil.index') }}" class="btn btn-primary">Add Data</a>
+                    <a href="{{ Route('hasil.create') }}" class="btn btn-primary">Add Data</a>
                     {{-- <button type="button" class="btn btn-primary">Settings</button>
                           <button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">	<span class="visually-hidden">Toggle Dropdown</span>
                           </button>
@@ -43,7 +43,6 @@
                             <tr>
                                 <th>No</th>
                                 <th>Pengguna</th>
-                                <th>Pertanyaan</th>
                                 <th>Jawaban</th>
                                 <th>Tipe Kepribadian</th>
 
@@ -54,10 +53,9 @@
                             @foreach ($hasil as $data)
                             <tr>
                                 <td>{{ $i++ }}</td>
-                                <td>{{ $data->pengguna }}</td>
-                                <td>{{ $data->pertanyaan }}</td>
-                                <td>{{ $data->jawaban }}</td>
-                                <td>{{ $data->tipe_kepribadian }}</td>
+                                <td>{{ $data->pengguna->name }}</td>
+                                <td>{{ $data->jawaban->jawaban }}</td>
+                                <td>{{ $data->jeniskepribadian->jenis_kepribadian }}</td>
                                 <td>
                                     <form action="{{ Route('hasil.destroy', $data->id) }}" method="post">
                                         @csrf

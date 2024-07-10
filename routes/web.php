@@ -34,7 +34,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth',isAdmin::class]], fun
 
 //rote frotend
 Route::get('/',[FrontController::class, 'index']);
-Route::get('test',[FrontController::class, 'test']);
+Route::get('tipe',[FrontController::class, 'tipe']);
 // Route::get('contact',[FrontController::class, 'contact']);
 // Route::get('shop',[FrontController::class, 'shop']);
 // Route::get('cart',[FrontController::class, 'cart']);

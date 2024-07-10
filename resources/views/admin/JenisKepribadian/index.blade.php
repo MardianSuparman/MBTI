@@ -19,7 +19,7 @@
             </div>
             <div class="ms-auto">
                 <div class="btn-group">
-                    <a href="{{ Route('jeniskepribadian.index') }}" class="btn btn-primary">Add Data</a>
+                    <a href="{{ Route('jeniskepribadian.create') }}" class="btn btn-primary">Add Data</a>
                     {{-- <button type="button" class="btn btn-primary">Settings</button>
                           <button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">	<span class="visually-hidden">Toggle Dropdown</span>
                           </button>
@@ -55,20 +55,20 @@
                             @foreach ($jeniskepribadian as $data)
                             <tr>
                                 <td>{{ $i++ }}</td>
-                                <td>{{ $data->jeniskepriadian }}</td>
+                                <td>{{ $data->jenis_kepribadian }}</td>
                                 <td>{{ $data->pengertian }}</td>
                                 <td>{{ $data->kelebihan }}</td>
                                 <td>{{ $data->kekurangan }}</td>
                                 <td>{{ $data->karir }}</td>
                                 <td>
-                                    <form action="{{ Route('jeniskepriadian.destroy', $data->id) }}" method="post">
+                                    <form action="{{ Route('jeniskepribadian.destroy', $data->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{ Route('jeniskepriadian.edit', $data->id) }}" class="btn btn-warning">
+                                        <a href="{{ Route('jeniskepribadian.edit', $data->id) }}" class="btn btn-warning">
                                             Edit
                                         </a>
                                         |
-                                        <a href="{{ route('jeniskepriadian.destroy', $data->id) }}" class="btn btn-danger"
+                                        <a href="{{ route('jeniskepribadian.destroy', $data->id) }}" class="btn btn-danger"
                                             data-confirm-delete="true">Delete</a>
                                     </form>
                                 </td>
