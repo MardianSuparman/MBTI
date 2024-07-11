@@ -1,507 +1,150 @@
 @extends('layouts.user')
 @section('content')
-<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel"
-data-pause="hover" data-interval="false">
-<!-- Indicators -->
-{{-- <ol class="carousel-indicators">
-    <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-    <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-</ol> --}}
-<div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-        <div id="home" class="first-section"
-            style="background-image:url('{{ asset('assets/front/images/slider-01.jpg') }}');">
-            <div class="dtab">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 text-right">
-                            <div class="big-tagline">
-                                <h2><strong >Personality Test </strong></h2>
-                                <p class="lead">
-                                    Ketahui siapa dirimu dan mulai tentukan karirmu
-                                </p>
-                                {{-- <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#" class="hover-btn-new"><span>Read More</span></a> --}}
-                            </div>
-                        </div>
-                    </div><!-- end row -->
-                </div><!-- end container -->
-            </div>
-        </div><!-- end section -->
-    </div>
-    {{-- <div class="carousel-item">
-        <div id="home" class="first-section"
-            style="background-image:url('{{ asset('assets/front/images/slider-02.jpg') }}');">
-            <div class="dtab">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 text-left">
-                            <div class="big-tagline">
-                                <h2 data-animation="animated zoomInRight">SmartEDU <strong>education
-                                        school</strong></h2>
-                                <p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive
-                                    landing page template, you can promote your all hosting, domain and email
-                                    services. </p>
-                                <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#" class="hover-btn-new"><span>Read More</span></a>
-                            </div>
-                        </div>
-                    </div><!-- end row -->
-                </div><!-- end container -->
-            </div>
-        </div><!-- end section -->
-    </div>
-    <div class="carousel-item">
-        <div id="home" class="first-section"
-            style="background-image:url('{{ asset('assets/front/images/slider-03.jpg') }}');">
-            <div class="dtab">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 text-center">
-                            <div class="big-tagline">
-                                <h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company
-                                </h2>
-                                <p class="lead" data-animation="animated fadeInLeft">1 IP included with each
-                                    server
-                                    Your Choice of any OS (CentOS, Windows, Debian, Fedora)
-                                    FREE Reboots</p>
-                                <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="#" class="hover-btn-new"><span>Read More</span></a>
-                            </div>
-                        </div>
-                    </div><!-- end row -->
-                </div><!-- end container -->
-            </div>
-        </div><!-- end section -->
-    </div> --}}
-    {{-- <!-- Left Control -->
-    <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button"
-        data-slide="prev">
-        <span class="fa fa-angle-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
 
-    <!-- Right Control -->
-    <a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button"
-        data-slide="next">
-        <span class="fa fa-angle-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a> --}}
+<!-- business -->
+<div class="business">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <span>Ketahui dirimu lebih dalam</span>
+                    <h2>Tentukan Titik Awal Untuk Menentukan Karir Anda</h2>
+                    {{-- <p>It is a long established fact that a reader will be distracted by the readable content of a
+                        page</p> --}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="business_box ">
+                            <figure><img src="{{asset('assets/front/images/business_img.jpg')}}" alt="#" /></figure>
+                            <p>Tes kepribadian dapat membantu individu dalam memilih karir yang sesuai dengan minat,
+                                nilai, dan kecenderungan kepribadian mereka. Dengan Memahami kepribadian kita membantu
+                                kita memahami preferensi dan cara terbaik untuk bekerja dan  memungkinkan
+                                kita untuk mengidentifikasi keterampilan yang perlu ditingkatkan untuk meningkatkan
+                                kinerja dalam karir</p>
+                            {{-- <a class="read_more" href="#">Read more</a> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
+<!-- end business -->
 
-<div id="overviews" class="section wb">
-<div class="container">
-    <div class="section-title row text-center">
-        <div class="col-md-8 offset-md-2">
-            <h3>Apa Itu Personality Test?</h3>
-            <p class="lead">
-                Tes kepribadian adalah metode atau instrumen psikologis yang dirancang untuk mengukur
-                aspek-aspek tertentu dari kepribadian seseorang. Tujuan utama dari tes kepribadian adalah untuk
-                memberikan pemahaman yang lebih baik tentang bagaimana seseorang berpikir, merasa, dan
-                berperilaku dalam berbagai situasi.
-            </p>
-        </div>
-    </div><!-- end title -->
-
-    <div class="row align-items-center">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-            <div class="message-box">
-                <h4>2018 BEST SmartEDU education school</h4>
-                <h2>Welcome to SmartEDU education school</h2>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam
-                    risus. Sed a tellus quis mi rhoncus dignissim.</p>
-
-                <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
-                    bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis
-                    montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
-
-                <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-            </div><!-- end messagebox -->
-        </div><!-- end col -->
-
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-            <div class="post-media wow fadeIn">
-                <img src="{{ asset('assets/front/images/about_02.jpg') }}" alt=""
-                    class="img-fluid img-rounded">
-            </div><!-- end media -->
-        </div><!-- end col -->
-    </div>
-    <div class="row align-items-center">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-            <div class="post-media wow fadeIn">
-                <img src="{{ asset('assets/front/images/about_03.jpg') }}" alt=""
-                    class="img-fluid img-rounded">
-            </div><!-- end media -->
-        </div><!-- end col -->
-
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-            <div class="message-box">
-                <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
-                    bibendum.</p>
-
-                <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-            </div><!-- end messagebox -->
-        </div><!-- end col -->
-
-    </div><!-- end row -->
-</div><!-- end container -->
-</div><!-- end section -->
-
-<section class="section lb page-section">
-<div class="container">
-    <div class="section-title row text-center">
-        <div class="col-md-8 offset-md-2">
-            <h3>Apa Itu Personality Tes?</h3>
-            <p class="lead">
-                Tes kepribadian adalah metode atau instrumen psikologis yang dirancang untuk mengukur
-                aspek-aspek tertentu dari kepribadian seseorang. Tujuan utama dari tes kepribadian adalah untuk
-                memberikan pemahaman yang lebih baik tentang bagaimana seseorang berpikir, merasa, dan
-                berperilaku dalam berbagai situasi.
-            </p>
-        </div>
-    </div><!-- end title -->
-</div>
-</section>
-
-{{-- <div class="section cl">
-<div class="container">
-    <div class="row text-left stat-wrap">
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                    class="flaticon-study"></i></span>
-            <p class="stat_count">12000</p>
-            <h3>Students</h3>
-        </div><!-- end col -->
-
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                    class="flaticon-online"></i></span>
-            <p class="stat_count">240</p>
-            <h3>Courses</h3>
-        </div><!-- end col -->
-
-        <div class="col-md-4 col-sm-4 col-xs-12">
-            <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
-                    class="flaticon-years"></i></span>
-            <p class="stat_count">55</p>
-            <h3>Years Completed</h3>
-        </div><!-- end col -->
-    </div><!-- end row -->
-</div><!-- end container -->
-</div><!-- end section --> --}}
-{{--
-<div id="plan" class="section lb">
-<div class="container">
-    <div class="section-title text-center">
-        <h3>Choose Your Plan</h3>
-        <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. </p>
-    </div><!-- end title -->
-
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <div class="message-box">
-                <ul class="nav nav-pills nav-stacked" id="myTabs">
-                    <li><a class="active" href="#tab1" data-toggle="pill">Monthly Subscription</a></li>
-                    <li><a href="#tab2" data-toggle="pill">Yearly Subscription</a></li>
-                </ul>
+<!-- Projects -->
+<div class="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <span>Ketahui dirimu lebih dalam</span>
+                    <h2>APA ITU PERSONALITY TEST</h2>
+                    {{-- <p></p> --}}
+                </div>
             </div>
-        </div><!-- end col -->
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="projects_box ">
+                            <figure><img src="{{asset('assets/front/images/projects_img.png')}}" alt="#" /></figure>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="projects_box ">
+                            <p>Tes MBTI bertujuan untuk membantu individu memahami preferensi mereka sendiri dalam
+                                setiap dimensi ini, dan dari hasilnya, mereka diklasifikasikan ke dalam salah satu dari
+                                16 tipe kepribadian yang berbeda (misalnya, INTJ, ENFP, ISTP, dsb.). Ini dapat
+                                memberikan wawasan tentang gaya komunikasi, kecenderungan karir, dinamika hubungan, dan
+                                cara individu berinteraksi dengan dunia di sekitarnya. Namun, penting untuk dicatat
+                                bahwa MBTI bukanlah alat diagnostik, melainkan alat deskriptif yang membantu individu
+                                memahami preferensi mereka sendiri dalam berbagai situasi</p>
+                            {{-- <a class="read_more" href="#">Read more</a> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<!-- end projects -->
 
-    <hr class="invis">
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="tab-content">
-                <div class="tab-pane active fade show" id="tab1">
-                    <div class="row text-center">
-                        <div class="col-md-4">
-                            <div class="pricing-table pricing-table-highlighted">
-                                <div class="pricing-table-header grd1">
-                                    <h2>$45</h2>
-                                    <h3>per month</h3>
-                                </div>
-                                <div class="pricing-table-space"></div>
-                                <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses
-                                    </p>
-                                    <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                    </p>
-                                </div>
-                                <div class="pricing-table-sign-up">
-                                    <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="pricing-table pricing-table-highlighted">
-                                <div class="pricing-table-header grd1">
-                                    <h2>$59</h2>
-                                    <h3>per month</h3>
-                                </div>
-                                <div class="pricing-table-space"></div>
-                                <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses
-                                    </p>
-                                    <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                    </p>
-                                </div>
-                                <div class="pricing-table-sign-up">
-                                    <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="pricing-table pricing-table-highlighted">
-                                <div class="pricing-table-header grd1">
-                                    <h2>$85</h2>
-                                    <h3>per month</h3>
-                                </div>
-                                <div class="pricing-table-space"></div>
-                                <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses
-                                    </p>
-                                    <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                    </p>
-                                </div>
-                                <div class="pricing-table-sign-up">
-                                    <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- end row -->
-                </div><!-- end pane -->
-
-                <div class="tab-pane fade" id="tab2">
-                    <div class="row text-center">
-                        <div class="col-md-4">
-                            <div class="pricing-table pricing-table-highlighted">
-                                <div class="pricing-table-header grd1">
-                                    <h2>$477</h2>
-                                    <h3>Year</h3>
-                                </div>
-                                <div class="pricing-table-space"></div>
-                                <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses
-                                    </p>
-                                    <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                    </p>
-                                </div>
-                                <div class="pricing-table-sign-up">
-                                    <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="pricing-table pricing-table-highlighted">
-                                <div class="pricing-table-header grd1">
-                                    <h2>$485</h2>
-                                    <h3>Year</h3>
-                                </div>
-                                <div class="pricing-table-space"></div>
-                                <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses
-                                    </p>
-                                    <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                    </p>
-                                </div>
-                                <div class="pricing-table-sign-up">
-                                    <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="pricing-table pricing-table-highlighted">
-                                <div class="pricing-table-header grd1">
-                                    <h2>$500</h2>
-                                    <h3>Year</h3>
-                                </div>
-                                <div class="pricing-table-space"></div>
-                                <div class="pricing-table-features">
-                                    <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses
-                                    </p>
-                                    <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                    <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                    <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                    <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                    </p>
-                                </div>
-                                <div class="pricing-table-sign-up">
-                                    <a href="#" class="hover-btn-new orange"><span>Order Now</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- end row -->
-                </div><!-- end pane -->
-            </div><!-- end content -->
-        </div><!-- end col -->
-    </div><!-- end row -->
-</div><!-- end container -->
-</div><!-- end section --> --}}
-
-<div id="testimonials" class="parallax section db parallax-off"
-style="background-image:url('{{ asset('assets/front/images/parallax_04.jpg') }}');">
-<div class="container">
-    <div class="section-title text-center">
-        <h3>Testimonials</h3>
-        <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. </p>
-    </div><!-- end title -->
-
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <div class="testi-carousel owl-carousel owl-theme">
-                <div class="testimonial clearfix">
-                    <div class="testi-meta">
-                        <img src="{{ asset('assets/front/images/testi_01.png') }}" alt=""
-                            class="img-fluid">
-                        <h4>James Fernando </h4>
+<!-- Testimonial -->
+<div class="section">
+    <div class="container">
+        <div id="" class="Testimonial">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Testimonial</h2>
                     </div>
-                    <div class="desc">
-                        <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                        <p class="lead">They have got my project on time with the competition with a sed
-                            highly skilled, and experienced & professional team.</p>
-                    </div>
-                    <!-- end testi-meta -->
                 </div>
-                <!-- end testimonial -->
-
-                <div class="testimonial clearfix">
-                    <div class="testi-meta">
-                        <img src="{{ asset('assets/front/images/testi_02.png') }}" alt=""
-                            class="img-fluid">
-                        <h4>Jacques Philips </h4>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="Testimonial_box">
+                        <i><img src="{{asset('assets/front/images/plan1.png')}}" alt="#" /></i>
                     </div>
-                    <div class="desc">
-                        <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                        <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and
-                            praising pain was born and I will give you completed.</p>
-                    </div>
-                    <!-- end testi-meta -->
                 </div>
-                <!-- end testimonial -->
-
-                <div class="testimonial clearfix">
-                    <div class="testi-meta">
-                        <img src="{{ asset('assets/front/images/testi_03.png') }}" alt=""
-                            class="img-fluid ">
-                        <h4>Venanda Mercy </h4>
+                <div class="col-md-9">
+                    <div class="Testimonial_box">
+                        <h4>Donals</h4>
+                        <p>Tof Lorem Ipsum, you need to be There are many variations of passages of Lorem Ipsum
+                            available, but the majority have suffered alteration in some form, by injected humour, or
+                            randomised words which don't look even slightly believable. If you are going to use a pass
+                            <br>
+                            age of Lorem Ipsum, you need to be
+                        </p>
                     </div>
-                    <div class="desc">
-                        <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                        <p class="lead">The master-builder of human happines no one rejects, dislikes avoids
-                            pleasure itself, because it is very pursue pleasure. </p>
-                    </div>
-                    <!-- end testi-meta -->
                 </div>
-                <!-- end testimonial -->
-                <div class="testimonial clearfix">
-                    <div class="testi-meta">
-                        <img src="{{ asset('assets/front/images/testi_01.png') }}" alt=""
-                            class="img-fluid">
-                        <h4>James Fernando </h4>
-                    </div>
-                    <div class="desc">
-                        <h3><i class="fa fa-quote-left"></i> Wonderful Support!</h3>
-                        <p class="lead">They have got my project on time with the competition with a sed
-                            highly skilled, and experienced & professional team.</p>
-                    </div>
-                    <!-- end testi-meta -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Testimonial -->
+
+<!-- contact -->
+<div id="contact" class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Contact us</h2>
+                    <span>There are many variations of passages of Lorem Ipsum available, but the </span>
                 </div>
-                <!-- end testimonial -->
-
-                <div class="testimonial clearfix">
-                    <div class="testi-meta">
-                        <img src="{{ asset('assets/front/images/testi_02.png') }}" alt=""
-                            class="img-fluid">
-                        <h4>Jacques Philips </h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <form class="main_form ">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <input class="form_contril" placeholder="Name " type="text" name="Name ">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="form_contril" placeholder="Phone Number" type="text" name=" Phone Number">
+                        </div>
+                        <div class="col-md-12">
+                            <input class="form_contril" placeholder="Email" type="text" name="Email">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <button class="send_btn">Send</button>
+                        </div>
                     </div>
-                    <div class="desc">
-                        <h3><i class="fa fa-quote-left"></i> Awesome Services!</h3>
-                        <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and
-                            praising pain was born and I will give you completed.</p>
-                    </div>
-                    <!-- end testi-meta -->
-                </div>
-                <!-- end testimonial -->
-
-                <div class="testimonial clearfix">
-                    <div class="testi-meta">
-                        <img src="{{ asset('assets/front/images/testi_03.png') }}" alt=""
-                            class="img-fluid">
-                        <h4>Venanda Mercy </h4>
-                    </div>
-                    <div class="desc">
-                        <h3><i class="fa fa-quote-left"></i> Great & Talented Team!</h3>
-                        <p class="lead">The master-builder of human happines no one rejects, dislikes avoids
-                            pleasure itself, because it is very pursue pleasure. </p>
-                    </div>
-                    <!-- end testi-meta -->
-                </div><!-- end testimonial -->
-            </div><!-- end carousel -->
-        </div><!-- end col -->
-    </div><!-- end row -->
-</div><!-- end container -->
-</div><!-- end section -->
-
-{{-- <div class="parallax section dbcolor">
-<div class="container">
-    <div class="row logos">
-        <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-            <a href="#"><img src="{{ asset('assets/front/images/logo_01.png') }}" alt=""
-                    class="img-repsonsive"></a>
+                </form>
+            </div>
         </div>
-        <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-            <a href="#"><img src="{{ asset('assets/front/images/logo_02.png') }}" alt=""
-                    class="img-repsonsive"></a>
-        </div>
-        <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-            <a href="#"><img src="{{ asset('assets/front/images/logo_03.png') }}" alt=""
-                    class="img-repsonsive"></a>
-        </div>
-        <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-            <a href="#"><img src="{{ asset('assets/front/images/logo_04.png') }}" alt=""
-                    class="img-repsonsive"></a>
-        </div>
-        <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-            <a href="#"><img src="{{ asset('assets/front/images/logo_05.png') }}" alt=""
-                    class="img-repsonsive"></a>
-        </div>
-        <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-            <a href="#"><img src="{{ asset('assets/front/images/logo_06.png') }}" alt=""
-                    class="img-repsonsive"></a>
-        </div>
-    </div><!-- end row -->
-</div><!-- end container -->
-</div><!-- end section --> --}}
+    </div>
+</div>
+<!-- end contact -->
 @endsection

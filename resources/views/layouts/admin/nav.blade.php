@@ -133,7 +133,7 @@
           </ul>
         </li>
 
-        <li class="nav-item dropdown position-static d-md-flex d-none">
+        {{-- <li class="nav-item dropdown position-static d-md-flex d-none">
           <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-auto-close="outside"
           data-bs-toggle="dropdown" href="javascript:;"><i class="material-icons-outlined">done_all</i></a>
           <div class="dropdown-menu dropdown-menu-end mega-menu shadow-lg p-4 p-lg-5">
@@ -270,8 +270,8 @@
              </div><!--end row-->
             </div>
           </div>
-        </li>
-        <li class="nav-item dropdown">
+        </li> --}}
+        {{-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-auto-close="outside"
             data-bs-toggle="dropdown" href="javascript:;"><i class="material-icons-outlined">apps</i></a>
           <div class="dropdown-menu dropdown-menu-end dropdown-apps shadow-lg p-3">
@@ -409,8 +409,8 @@
               </div><!--end row-->
             </div>
           </div>
-        </li>
-        <li class="nav-item dropdown">
+        </li> --}}
+        {{-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" data-bs-auto-close="outside"
             data-bs-toggle="dropdown" href="javascript:;"><i class="material-icons-outlined">notifications</i>
             <span class="badge-notify">5</span>
@@ -547,13 +547,13 @@
               </div>
             </div>
           </div>
-        </li>
-        <li class="nav-item d-md-flex d-none">
+        </li> --}}
+        {{-- <li class="nav-item d-md-flex d-none">
           <a class="nav-link position-relative" data-bs-toggle="offcanvas" href="#offcanvasCart"><i
               class="material-icons-outlined">shopping_cart</i>
             <span class="badge-notify">8</span>
           </a>
-        </li>
+        </li> --}}
         <li class="nav-item dropdown">
           <a href="javascrpt:;" class="dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
              <img src="https://placehold.co/110x110/png" class="rounded-circle p-1 border" width="45" height="45" alt="">
@@ -566,8 +566,8 @@
                 <h5 class="user-name mb-0 fw-bold">Hello, {{Auth::user('')->name}} </h5>
               </div>
             </a>
-            <hr class="dropdown-divider">
-            <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
+            {{-- <hr class="dropdown-divider"> --}}
+            {{-- <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
               class="material-icons-outlined">person_outline</i>Profile</a>
             <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
               class="material-icons-outlined">local_bar</i>Setting</a>
@@ -576,7 +576,7 @@
             <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
               class="material-icons-outlined">account_balance</i>Earning</a>
               <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
-                class="material-icons-outlined">cloud_download</i>Downloads</a>
+                class="material-icons-outlined">cloud_download</i>Downloads</a> --}}
             <hr class="dropdown-divider">
             <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{{route('logout')}}"  href="{{ route('logout') }}"
             onclick="event.preventDefault();

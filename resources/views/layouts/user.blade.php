@@ -1,222 +1,70 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>diigo</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{{asset('assets/front/css/bootstrap.min.css')}}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{{asset('assets/front/css/style.css')}}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{{asset('assets/front/css/responsive.css')}}">
+      <!-- fevicon -->
+      <link rel="icon" href="{{asset('assets/front/images/fevicon.png')}}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{{asset('assets/front/css/jquery.mCustomScrollbar.min.css')}}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script><![endif]-->
 
-<!-- Basic -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+      @yield('style')
 
-<!-- Mobile Metas -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="{{asset('assets/front/images/loading.gif')}}" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         @include('layouts.user.nav')
+      </header>
+      <!-- end banner -->
 
-<!-- Site Metas -->
-<title>SmartEDU - Education Responsive HTML5 Template</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
+      @yield('content')
 
-<!-- Site Icons -->
-<link rel="shortcut icon" href="{{ asset('assets/front/images/favicon.ico') }}" type="image/x-icon" />
-<link rel="apple-touch-icon" href="{{ asset('assets/front/images/apple-touch-icon.png') }}">
-
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap.min.css') }}">
-<!-- Site CSS -->
-<link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
-<!-- ALL VERSION CSS -->
-<link rel="stylesheet" href="{{ asset('assets/front/css/versions.css') }}">
-<!-- Responsive CSS -->
-<link rel="stylesheet" href="{{ asset('assets/front/css/responsive.css') }}">
-<!-- Custom CSS -->
-<link rel="stylesheet" href="{{ asset('assets/front/css/custom.css') }}">
-
-<!-- Modernizer for Portfolio -->
-<script src="{{ asset('assets/front/js/modernizer.js') }}"></script>
-
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')}}"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')}}"></script>
-    <![endif]-->
-
-</head>
-
-<body class="host_version">
-
-    <!-- Modal -->
-    {{-- <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header tit-up">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Customer Login</h4>
-                </div>
-                <div class="modal-body customer-box">
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs">
-                        <li><a class="active" href="#Login" data-toggle="tab">Login</a></li>
-                        <li><a href="#Registration" data-toggle="tab">Registration</a></li>
-                    </ul>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="Login">
-                            <form role="form" class="form-horizontal">
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" id="email1" placeholder="Name" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-10">
-                                        <button type="submit" class="btn btn-light btn-radius btn-brd grd1">
-                                            Submit
-                                        </button>
-                                        <a class="for-pwd" href="javascript:;">Forgot your password?</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane" id="Registration">
-                            <form role="form" class="form-horizontal">
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" placeholder="Name" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" id="email" placeholder="Email" type="email">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" id="mobile" placeholder="Mobile" type="email">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input class="form-control" id="password" placeholder="Password" type="password">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-10">
-                                        <button type="button" class="btn btn-light btn-radius btn-brd grd1">
-                                            Save &amp; Continue
-                                        </button>
-                                        <button type="button" class="btn btn-light btn-radius btn-brd grd1">
-                                            Cancel</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div> --}}
-
-    <!-- LOADER -->
-    <div id="preloader">
-        <div class="loader-container">
-            <div class="progress-br float shadow">
-                <div class="progress__item"></div>
-            </div>
-        </div>
-    </div>
-    <!-- END LOADER -->
-
-    <!-- Start header -->
-    @include('layouts.user.nav')
-    <!-- End header -->
-
-   @yield('content')
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>About US</h3>
-                        </div>
-                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus
-                            bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis
-                            dis montes.</p>
-                        <div class="footer-right">
-                            <ul class="footer-links-soi">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            </ul><!-- end links -->
-                        </div>
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Information Link</h3>
-                        </div>
-                        <ul class="footer-links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-
-                <div class="col-lg-4 col-md-4 col-xs-12">
-                    <div class="widget clearfix">
-                        <div class="widget-title">
-                            <h3>Contact Details</h3>
-                        </div>
-
-                        <ul class="footer-links">
-                            <li><a href="mailto:#">info@yoursite.com</a></li>
-                            <li><a href="#">www.yoursite.com</a></li>
-                            <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                            <li>+61 3 8376 6284</li>
-                        </ul><!-- end links -->
-                    </div><!-- end clearfix -->
-                </div><!-- end col -->
-
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </footer><!-- end footer -->
-
-    <div class="copyrights">
-        <div class="container">
-            <div class="footer-distributed">
-                <div class="footer-center">
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">SmartEDU</a>
-                        Design By : <a href="https://html.design/">html design</a></p>
-                </div>
-            </div>
-        </div><!-- end container -->
-    </div><!-- end copyrights -->
-
-    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
-
-    <!-- ALL JS FILES -->
-    <script src="{{ asset('assets/front/js/all.js') }}"></script>
-    <!-- ALL PLUGINS -->
-    <script src="{{ asset('assets/front/js/custom.js') }}"></script>
-    <script src="{{ asset('assets/front/js/timeline.min.js') }}"></script>
-    <script>
-        timeline(document.querySelectorAll('.timeline'), {
-            forceVerticalMode: 700,
-            mode: 'horizontal',
-            verticalStartPosition: 'left',
-            visibleItems: 4
-        });
-    </script>
-</body>
-
+      <!--  footer -->
+      <footer>
+         @include('layouts.user.footer')
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="{{asset('assets/front/js/jquery.min.js')}}"></script>
+      <script src="{{asset('assets/front/js/popper.min.js')}}"></script>
+      <script src="{{asset('assets/front/js/bootstrap.bundle.min.js')}}"></script>
+      <script src="{{asset('assets/front/js/jquery-3.0.0.min.js')}}"></script>
+      <script src="{{asset('assets/front/js/plugin.js')}}"></script>
+      <!-- sidebar -->
+      <script src="{{asset('assets/front/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+      <script src="{{asset('assets/front/js/custom.js')}}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')}}"></script>
+   </body>
 </html>
+
