@@ -6,6 +6,16 @@ $tipe = App\Models\JenisKepribadian::orderBy('id', 'asc')->get();
 <div class="section">
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Macam Macam Tipe Kepribadian</h2>
+                    <span>Kenali dirimu seutuhnya</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
             @foreach ($tipe as $item)
             <div class="col-md-4">
                 <div class="container ">
