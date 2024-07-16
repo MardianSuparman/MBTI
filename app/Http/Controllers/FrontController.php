@@ -10,42 +10,16 @@ class FrontController extends Controller
 
     public function index()
     {
-        return view('user');
+        return view('MBTI.user');
     }
 
     public function test()
     {
-        return view('pengisian');
+        return view('MBTI.pengisian');
     }
 
     public function tipe()
     {
-        return view('tipe');
+        return view('MBTI.tipe');
     }
-
-    public function cart()
-    {
-        return view('cart');
-    }
-
-    public function checkout()
-    {
-        return view('checkout');
-    }
-
-    public function track()
-    {
-        return view('track');
-    }
-
-    public function aboute()
-    {
-        return view('aboute');
-    }
-
-    public function detailproduk()
-    {
-        return view('detailproduk');
-    }
-
 }

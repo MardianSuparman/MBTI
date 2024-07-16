@@ -13,12 +13,9 @@ return new class extends Migration
     {
         Schema::create('hasils', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_pengguna')->unsigned();
-            $table->bigInteger('id_jawaban')->unsigned();
-            $table->bigInteger('id_jenis_kepribadian')->unsigned();
-            $table->foreign('id_pengguna')->references('id')->on('penggunas')->onDelete('cascade');
-            $table->foreign('id_jawaban')->references('id')->on('jawabans')->onDelete('cascade');
-            $table->foreign('id_jenis_kepribadian')->references('id')->on('jenis_kepribadians')->onDelete('cascade');
+            $table->string('name');
+            $table->string('email');
+            $table->string('hasil');
             $table->timestamps();
         });
     }

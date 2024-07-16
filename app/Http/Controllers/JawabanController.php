@@ -14,9 +14,10 @@ class JawabanController extends Controller
      */
     public function index()
     {
+        $pertanyaan = Pertanyaan::all();
         $jawaban = Jawaban::all();
         confirmDelete("Delete", "Are you sure you want to delete?");
-        return view('admin.jawaban.index', compact('jawaban'));
+        return view('admin.jawaban.index', compact('jawaban', 'pertanyaan'));
     }
 
     /**

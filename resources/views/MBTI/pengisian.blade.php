@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('style')
-    <style>
+    {{-- <style>
         .inputGroup {
             background-color: #fff;
             display: block;
@@ -114,10 +114,12 @@
             background-color: #9AA3AC;
             padding: 0 8px;
         }
-    </style>
+    </style> --}}
 @endsection
 @php
-    $pertanyaan = App\Models\Pertanyaan::orderBy('id', 'asc')->get();
+    $pertanyaans = App\Models\Pertanyaan::orderBy('id', 'asc')->get();
+    $jawabans = App\Models\Jawaban::orderBy('id', 'asc')->get();
+    // $pertanyaans = App\Models\Pertanyaan::with('jawaban')->get();
 @endphp
 @section('content')
     <div class="section">
@@ -132,29 +134,51 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <form class="form-group">
-                    @foreach ($pertanyaan as $data)
-                        <b><p>{{ $loop->literation }}. {{ $data->pertanyaan }}</p></b>
-                        @foreach ($data->jawaban as $jawaban)
-                            <div class="col-md-6">
-                                <div class="container">
-                                    <h2>{{ $item->pertanyaan }}</h2>
-                                    <div class="inputGroup">
-                                        <input id="radio1" name="radio" type="radio" />
-                                        <label for="radio1">Iya</label>
-                                    </div>
-                                    <div class="inputGroup">
-                                        <input id="radio2" name="radio" type="radio" />
-                                        <label for="radio2">Tidak</label>
-                                    </div>
-                                </div>
-                                <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+            <div class="mb-3">
+                @foreach ($pertanyaans as $pertanyaan)
+                    <div class="mb-4">
+                        <p><h2>{{ $loop->iteration }}. {{ $pertanyaan->text }}</h2></p>
+                        @foreach ($pertanyaan->$jawabans ?? [] as $jawaban)
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="jawaban_{{ $jawaban->id }}"
+                                    name="jawabans[{{ $pertanyaan->id }}]" value="{{ $jawaban->value }}" required>
+                                <label class="form-check-label"
+                                    for="jawaban_{{ $jawaban->id }}">{{ $jawaban->text }}</label>
                             </div>
                         @endforeach
-                    @endforeach
-                </form>
+                    </div>
+                    <hr>
+                @endforeach
             </div>
         </div>
     </div>
 @endsection
+
+{{--  <div class="row">
+                <form class="form-group">
+                    {{-- <div class="col-md-12"> --}}
+{{-- <div class="container"> --}}
+{{-- @foreach ($pertanyaans as $pertanyaan)
+                        <h2><p>{{ $pertanyaan->text }}</p></h2>
+                        @foreach ($pertanyaan->jawabans ?? [] as $jawaban)
+                        {{-- @foreach ($pertanyaan->jawabans as $jawaban) --}}
+{{-- <input type="radio" id="jawaban_{{ $jawaban->id }}" name="jawabans[{{ $pertanyaan->id }}]"
+                                value="{{ $jawaban->value }}" required>
+                            <label for="jawaban_{{ $jawaban->id }}">{{ $jawaban->jawaban }}</label>
+                            <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+                        @endforeach
+                        <br><br> --}}
+{{-- @endforeach --}}
+{{-- </div> --}}
+{{-- </div> --}}
+{{-- </form>
+            </div> --}}
+
+{{-- <div class="inputGroup">
+        <input id="radio1" name="radio" type="radio" />
+        <label for="radio1">Iya</label>
+    </div>
+    <div class="inputGroup">
+        <input id="radio2" name="radio" type="radio" />
+        <label for="radio2">Tidak</label>
+    </div> --}}

@@ -52,7 +52,7 @@
                             @foreach ($jawaban as $data)
                             <tr>
                                 <td>{{ $i++ }}</td>
-                                <td>{{ $data->pertanyaan->pertanyaan }}</td>
+                                <td>{{ $data->pertanyaan->text}}</td>
                                 <td>{{ $data->jawaban }}</td>
                                 {{-- <td>
                                     <form action="{{ Route('jawaban.destroy', $data->id) }}" method="post">
