@@ -11,7 +11,7 @@ class Pertanyaan extends Model
     use HasFactory;
 
     public function Jawaban(){
-        return $this->hashMany(Jawaban::class, 'id_pertanyaan');
+        return $this->hashMany(Jawaban::class, 'id_pertanyaan', 'id');
     }
 
 }

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Hasil;
 use App\Models\Pertanyaan;
+use App\Models\Jawaban;
+use App\Models\JenisKepribadian;
+use Auth;
 
 class MbtiController extends Controller
 {
@@ -16,8 +19,9 @@ class MbtiController extends Controller
      */
     public function index()
     {
+        $jawabans = Jawaban::all();
         $pertanyaans = Pertanyaan::with('jawabans')->get();
-        return view('pengisian', compact('pertanyaans'));
+        return view('pengisian', compact('pertanyaans', 'jawabans'));
     }
 
     /**

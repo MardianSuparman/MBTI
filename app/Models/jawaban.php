@@ -12,7 +12,7 @@ class jawaban extends Model
     use HasFactory;
 
     public function Pertanyaan(){
-        return $this->belongsTo(Pertanyaan::class, 'id_pertanyaan');
+        return $this->belongsTo(Pertanyaan::class, 'id_pertanyaan', 'id');
     }
 
 }

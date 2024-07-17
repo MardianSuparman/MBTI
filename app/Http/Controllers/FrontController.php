@@ -22,4 +22,8 @@ class FrontController extends Controller
     {
         return view('MBTI.tipe');
     }
+    public function hasil()
+    {
+        return view('MBTI.hasil');
+    }
 }

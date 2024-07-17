@@ -53,7 +53,7 @@
                             <tr>
                                 <td>{{ $i++ }}</td>
                                 <td>{{ $data->pertanyaan->text}}</td>
-                                <td>{{ $data->jawaban }}</td>
+                                <td>{{ $data->text }}</td>
                                 {{-- <td>
                                     <form action="{{ Route('jawaban.destroy', $data->id) }}" method="post">
                                         @csrf

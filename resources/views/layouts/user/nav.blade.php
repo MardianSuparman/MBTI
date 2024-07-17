@@ -7,7 +7,8 @@
                         <div class="center-desk">
                             <div class="logo">
                                 {{-- <a href="index.html"><img src="{{asset('assets/front/images/logo.png')}}" alt="#" /></a> --}}
-                                <h1>Personality Test</h1>
+                                {{-- <h1>Personality Test</h1> --}}
+                                <h1>Tipe Kepribadian</h1>
                             </div>
                         </div>
                     </div>
@@ -46,11 +47,13 @@
             <div class="row d_flex">
                 <div class="col-md-6">
                     <div class="text-bg">
-                        <h1>Personality Test</h1>
-                        <p>Alat test psikologis yang digunakan untuk mengukur dan mengevaluasi karakteristik kepribadian
+                        <h1>Tipe Kepribadian</h1>
+                        {{-- <h1>Personality Test</h1> --}}
+                        {{-- <p>Alat test psikologis yang digunakan untuk mengukur dan mengevaluasi karakteristik kepribadian
                             seseorang. Dengan tujuan untuk memberikan pemahaman yang lebih dalam tentang bagaimana individu merespons,
-                            berinteraksi, dan beradaptasi dengan lingkungan serta orang lain di sekitarnya</p>
-                        <a href="{{url('test')}}">Mulai Test</a>
+                            berinteraksi, dan beradaptasi dengan lingkungan serta orang lain di sekitarnya</p> --}}
+                        <p>Tipe kepribadian adalah cara untuk mengelompokkan orang berdasarkan karakteristik, perilaku, dan cara berpikir mereka.</p>
+                        <a href="{{url('tipe')}}">Lihat Selengkapnya</a>
                     </div>
                 </div>
                 <div class="col-md-6">

@@ -17,7 +17,7 @@ $tipe = App\Models\JenisKepribadian::orderBy('id', 'asc')->get();
     <div class="container">
         <div class="row">
             @foreach ($tipe as $item)
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="container ">
                     <h2>{{$item->jenis_kepribadian}}</h2>
                     <p>

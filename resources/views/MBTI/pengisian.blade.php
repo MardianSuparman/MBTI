@@ -117,8 +117,9 @@
     </style> --}}
 @endsection
 @php
+    // $pertanyaans = App\Models\Pertanyaan::with('jawabans')->orderBy('id', 'asc')->get();
     $pertanyaans = App\Models\Pertanyaan::orderBy('id', 'asc')->get();
-    $jawabans = App\Models\Jawaban::orderBy('id', 'asc')->get();
+    // $jawabans = App\Models\Jawaban::orderBy('id', 'asc')->get();
     // $pertanyaans = App\Models\Pertanyaan::with('jawaban')->get();
 @endphp
 @section('content')
@@ -133,12 +134,13 @@
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="mb-3">
                 @foreach ($pertanyaans as $pertanyaan)
                     <div class="mb-4">
-                        <p><h2>{{ $loop->iteration }}. {{ $pertanyaan->text }}</h2></p>
-                        @foreach ($pertanyaan->$jawabans ?? [] as $jawaban)
+                        <h2>{{ $loop->iteration }}. {{ $pertanyaan->text }}</h2>
+                        @foreach ($pertanyaan->jawabans ?? [] as $jawaban)
                             <div class="form-check">
                                 <input type="radio" class="form-check-input" id="jawaban_{{ $jawaban->id }}"
                                     name="jawabans[{{ $pertanyaan->id }}]" value="{{ $jawaban->value }}" required>
@@ -153,6 +155,31 @@
         </div>
     </div>
 @endsection
+
+
+
+{{-- <div class="container">
+        <div class="mb-3">
+            @foreach ($pertanyaans as $pertanyaan)
+                <div class="mb-4">
+                    <h2>{{ $loop->iteration }}. {{ $pertanyaan->text }}</h2>
+
+                    @if ($pertanyaan->jawabans && $pertanyaan->jawabans->isNotEmpty())
+                        @foreach ($pertanyaan->jawabans as $jawaban)
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="jawaban_{{ $jawaban->id }}"
+                                    name="jawabans[{{ $pertanyaan->id }}]" value="{{ $jawaban->value }}" required>
+                                <label class="form-check-label" for="jawaban_{{ $jawaban->id }}">{{ $jawaban->text }}</label>
+                            </div>
+                        @endforeach
+                    @else
+                        <p>Belum ada jawaban untuk pertanyaan ini.</p>
+                    @endif
+                </div>
+                <hr>
+            @endforeach
+        </div>
+    </div> --}}
 
 {{--  <div class="row">
                 <form class="form-group">

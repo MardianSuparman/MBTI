@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('id_pertanyaan')->unsigned();
             $table->foreign('id_pertanyaan')->references('id')->on('pertanyaans')->onDelete('cascade');
-            $table->string('jawaban');
+            $table->string('text');
             $table->enum('value', ['E', 'I', 'S', 'N', 'T', 'F', 'J', 'P']); //Nilai jawaban
             $table->timestamps();
         });
